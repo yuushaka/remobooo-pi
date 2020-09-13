@@ -1,0 +1,18 @@
+<div class="vui fixed menu button">
+<i class="vui _icon material-icons-outlined">menu</i>
+</div>
+<div class="vui fixed home button">
+<i class="vui _icon material-icons-outlined">home</i>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/javascripts/vui.js?<%= new Date() %>" charset="utf-8"></script>
+<script type="text/javascript">
+$(".item.poplink").popup({type:"open"});
+$('.vui.popupBack').popup({type:"close"});
+$('.vui.fixed.menu.button').menu({type:"open"});
+$('.vui.sidebarBack').menu({type:"close"});
+$('.vui.fixed.home.button').menu({type:"home",url:"<%= process.env.app_url %>"});
+$('#search').search({endpoint:"<%= process.env.app_url %>search/"});
+$('#popsearch').search({endpoint:"<%= process.env.app_url %>search/"});
+$('#age_check').age();
+</script>

@@ -1,0 +1,1414 @@
+html,body{
+width:100%;
+height:100%;
+-webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+text-size-adjust: 100%;
+font-size:13px!important;
+padding:0px;
+margin:0px;
+}
+body{
+background-color:#fff;
+}
+h1,h2,h3,h4,h5,h6{
+padding:0px;
+margin:0px;
+}
+ul{
+margin:0;
+}
+img.emoji {
+ height: 1em;
+ width: 1em;
+ margin: 0 .05em 0 .1em;
+ vertical-align: -0.1em;
+}
+:root {
+  --plyr-color-main:#ff47fb;
+}
+.app{
+width:100%;
+min-height:100%;
+padding:0px;
+margin:0px;
+}
+.vui.space.h10{
+height:10px;
+}
+.vui.space.h15{
+height:15px;
+}
+.vui.space.h20{
+height:20px;
+}
+.vui.space.h25{
+height:25px;
+}
+.vui.space.h30{
+height:30px;
+}
+.vui.space.h35{
+height:35px;
+}
+.vui.space.h40{
+height:40px;
+}
+.vui.space.h45{
+height:45px;
+}
+.vui.space.h50{
+height:50px;
+}
+.vui.space.h55{
+height:55px;
+}
+.vui.space.h60{
+height:60px;
+}
+.vui.space.h65{
+height:65px;
+}
+.vui.space.h1rem{
+height:1rem;
+}
+/*vui-tags*/
+.vui.tags .tag{
+float:left;
+margin-right:10px;
+}
+.vui.tags::after{
+display:block;
+content:"";
+clear:both;
+}
+
+/*vui-divider*/
+.vui.divider{
+height:0px;
+border:0px;
+border-top:1px #f0f0f0 solid;
+margin:5px auto;
+}
+
+/*vui-heaer*/
+.vui.header{
+position:fixed;
+top:0;
+left:0px;
+right:0;
+width:100%;
+height:60px;
+backdrop-filter: blur(32px);
+background-color: rgba(0,0,0,0.75);
+border-bottom: 1px solid rgba(0,0,0,0.1);
+padding:0px;
+margin:0px;
+z-index:100;
+}
+.vui.header::after{
+content:"";
+clear:both;
+}
+.vui.header .item{
+float:left;
+}
+.vui.header .item.logo{
+height:30px;
+padding:0px;
+margin:15px;
+}
+.vui.header .item.logo img{
+height:100%;
+}
+.vui.header .item._icon{
+height:30px;
+width:30px;
+overflow:hidden;
+padding:0px;
+margin:15px;
+}
+.vui.header .item._icon img{
+height:100%;
+width:100%;
+object-fit:cover;
+}
+.vui.header .item.search{
+position:relative;
+background-color:#fff;
+height:40px;
+line-height:40px;
+width:15em;
+border-radius:8px;
+overflow:hidden;
+padding:0px;
+margin:10px 15px;
+}
+.vui.header .item.search input{
+position:absolute;
+left:10px;
+top:0;
+bottom:0;
+background-color:transparent;
+color:#aaa;
+height:30px;
+width:calc(100% - 50px);
+border:0px;
+outline:none;
+padding:0px;
+margin:auto 0px;
+}
+.vui.header .item.search ._icon{
+position:absolute;
+right:10px;
+top:0;
+bottom:0;
+color:#aaa;
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+margin:auto 0px;
+}
+.vui.header .item.title{
+color:#fff;
+font-size:14px;
+font-weight:bold;
+height:30px;
+line-height:30px;
+margin:15px;
+}
+.vui.header .item.title ._icon{
+float:left;
+color:#aaa;
+font-size:20px;
+font-weight:bold;
+height:30px;
+line-height:30px;
+margin-right:10px;
+margin-left:0px;
+}
+.vui.header .item.title .text{
+display:inline-block;
+height:30px;
+line-height:30px;
+font-weight:bold;
+margin:0;
+margin-left:0px;
+margin-right:0px;
+}
+.vui .left{
+float:left;
+}
+.vui .right{
+float:right;
+}
+.vui .center{
+position:absolute;
+left:50%;
+transform: translateX(-50%);
+-webkit- translateX(-50%);
+display:inline-block;
+margin:auto;
+}
+.vui .circular{
+border-radius:50%;
+}
+.vui.button{
+display:block;
+background-color:#f0f0f0;
+border:1px #ddd solid;
+color:#333;
+border-radius:5px;
+padding:10px;
+margin:0px;
+}
+.vui.button:hover{
+background-color:#fdfdfd;
+border:1px #ddd solid;
+}
+
+.vui.sidebar2{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:fixed;
+  top:60px;
+  right:0;
+  bottom:0px;
+  background-color:#fff;
+  color:#aaa;
+  width:250px;
+  height:calc(100% - 60px);
+  border-left:1px #ddd solid;
+  padding:0px;
+  margin:0px;
+  z-index:100;
+}
+
+/*vui-sidebar*/
+.vui.sidebar{
+position:fixed;
+top:60px;
+left:0;
+bottom:0px;
+background-color:#fff;
+color:#aaa;
+width:250px;
+height:calc(100% - 60px);
+border-right:1px #ddd solid;
+padding:0px;
+margin:0px;
+z-index:100;
+}
+.vui.sidebar .group{
+}
+.vui.sidebar .group.category{
+  height:calc(100% - 350px);
+  overflow-y:scroll;
+}
+.vui.sidebar .group:first-child{
+border-top:0px;
+}
+.vui.sidebar .item{
+position:relative;
+display:block;
+background-color:#fff;
+color:#aaa;
+height:51px;
+width:calc(100% - 70px);
+padding:0px;
+margin:0px auto;
+cursor:pointer;
+}
+.vui.sidebar a.item:hover{
+color:#666;
+}
+.vui.sidebar a.item.active{
+color:#07B53B;
+}
+.vui.sidebar .item::after{
+content:"";
+clear:both;
+}
+.vui.sidebar .item img._icon{
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+width:30px;
+height:30px;
+margin:auto 0px;
+object-fit:contain;
+}
+.vui.sidebar .item i._icon{
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+font-size:25px;
+margin:auto 0px;
+}
+.vui.sidebar .item .text{
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+display:inline-block;
+width:calc(100% - 40px);
+height:30px;
+line-height:30px;
+margin:auto 0px;
+}
+/*vui-popup-search*/
+.vui.popup.search{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translateX(-50%) translateY(-50%);
+-webkit-transform:translateX(-50%) translateY(-50%);
+background-color:#fff;
+width:500px;
+border-radius:18px;
+box-shadow:0px 0px 10px #666;
+padding:32px;
+margin:0px;
+z-index:105;
+}
+.vui.popup.search .item.search{
+position:relative;
+background-color:#fcdbfb;
+height:40px;
+line-height:40px;
+width:100%;
+border-radius:40px;
+overflow:hidden;
+padding:0px;
+margin:0px;
+}
+.vui.popup.search .item.search input{
+position:absolute;
+left:20px;
+top:0;
+bottom:0;
+background-color:transparent;
+color:#aaa;
+height:30px;
+width:calc(100% - 70px);
+border:0px;
+outline:none;
+padding:0px;
+margin:auto 0px;
+}
+.vui.popup.search .item.search ._icon{
+position:absolute;
+right:20px;
+top:0;
+bottom:0;
+color:#aaa;
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+margin:auto 0px;
+}
+/*vui-popup-menu*/
+.vui.popup.menu{
+display:none;
+position:absolute;
+top:45px;
+left:24.5px;
+width:200px;
+background-color:#fff;
+color:#aaa;
+box-shadow:0px 0px 5px #aaa;
+border-radius:10px;
+padding:10px 0px;
+margin:0px;
+z-index:105;
+}
+.vui.popup.menu .item{
+position:relative;
+display:block;
+width:calc(100% - 30px);
+color:#aaa;
+height:40px;
+padding:0;
+margin:0px auto;
+}
+.vui.popup.menu a.item:hover{
+color:#666;
+}
+.vui.popup.menu .item img._icon{
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+width:20px;
+height:20px;
+margin:auto 0px;
+}
+.vui.popup.menu .item i._icon{
+position:absolute;
+top:0;
+left:0;
+bottom:0;
+width:20px;
+height:20px;
+line-height:20px;
+text-align:center;
+font-size:20px;
+margin:auto 0px;
+}
+.vui.popup.menu .item .text{
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+display:inline-block;
+width:calc(100% - 30px);
+height:20px;
+line-height:20px;
+margin:auto 0px;
+}
+
+/*vui-popup-ogp*/
+.vui.popup.ogp{
+display:none;
+position:fixed;
+top:0;
+left:0;
+height:100px;
+width:400px;
+background-color:#fff;
+color:#aaa;
+box-shadow:0px 0px 5px #aaa;
+border-radius:10px;
+overflow:hidden;
+padding:0px;
+margin:0px;
+z-index:105;
+}
+.vui.popup.ogp .vui.image{
+position:absolute;
+top:0px;
+left:0px;
+background-color:#fff;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+border-right:1px rgba(0, 0, 0, 0.1) solid;
+width:100px;
+height:100px;
+padding:0px;
+margin:0px;
+}
+.vui.popup.ogp .vui.title{
+position:absolute;
+top:0.5em;
+left:110px;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+width:calc(100% - 120px);
+height:1em;
+line-height:1em;
+font-weight:bold;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+padding:0px;
+margin:0px;
+}
+.vui.popup.ogp .vui.description{
+position:absolute;
+top:2.5em;
+left:110px;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+width:calc(100% - 120px);
+height:calc(100% - 3.5em);
+font-size:12px;
+display: -webkit-box;
+overflow: hidden;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+padding:0px;
+margin:0px;
+}
+
+.vui.fixed.menu.button{
+display:none;
+position:fixed;
+left:15px;
+bottom:15px;
+background-color:#fff;
+box-shadow:0px 0px 10px #ddd;
+width:66.56px;
+height:66.56px;
+border-radius:100%;
+padding:0px;
+margin:0px;
+}
+.vui.fixed.home.button{
+display:none;
+position:fixed;
+right:15px;
+bottom:15px;
+background-color:#fff;
+box-shadow:0px 0px 10px #ddd;
+width:66.56px;
+height:66.56px;
+border-radius:100%;
+padding:0px;
+margin:0px;
+}
+.vui.fixed.menu.button i._icon,.vui.fixed.home.button i._icon{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+font-size:25px;
+margin:auto;
+}
+.vui.sidebarBack{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:rgba(0,0,0,0.3);
+padding:0px;
+margin:0px;
+z-index:101;
+}
+.vui.popupBack{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:rgba(0,0,0,0.3);
+padding:0px;
+margin:0px;
+z-index:103;
+}
+
+.vui.main{
+position:absolute;
+top:60px;
+left:250px;
+right:0;
+min-height:calc(100% - 60px);
+width:calc(100% - 250px);
+padding:20px;
+margin:0px auto;
+}
+.vui.main .vui.image.top{
+width:100%;
+height:170px;
+background-position:center;
+background-size:cover;
+background-repeat:no-repeat;
+padding:0px;
+margin:0px;
+}
+.vui.main .vui.card{
+background-color:#fff;
+color:#333;
+border:0;
+}
+.vui.main .vui.card:first-child{
+margin:0px;
+}
+.vui.main .vui.card .title{
+display:flex;
+font-size:1.5rem!important;
+color:#aaa;
+font-weight:bold;
+padding:22px 32px;
+}
+.vui.main .vui.card .title ._icon{
+font-size:30px;
+width:30px;
+height:30px;
+padding:0px;
+margin:0px;
+}
+.vui.main .vui.card .title ._text{
+display:inline-block;
+font-size:18px;
+height:30px;
+line-height:30px;
+padding:0px;
+margin:0px;
+}
+.vui.main .vui.card .content{
+color:#aaa;
+padding:32px;
+margin:0px;
+}
+.vui.main .vui.card .content a.vlink{
+color:#07B53B;
+font-weight:bold;
+text-decoration:none;
+}
+.vui.main .vui.card .vui.avatar{
+width:58px;
+height:58px;
+border-radius:100%;
+vertical-align:middle;
+padding:0px;
+margin:0px;
+}
+.vui.main .app{
+position:relative;
+height:80px;
+padding:0px;
+margin:16px 0px;
+}
+.vui.main .app .info{
+position:absolute;
+top:50%;
+left:50%;
+transform: translateX(-50%) translateY(-50%);
+-webkit- translateX(-50%) translateY(-50%);
+display:inline-block;
+padding:0px;
+margin:0px;
+}
+.vui.main .app .info .name{
+display:block;
+font-size:15px;
+font-weight:bold;
+text-align: center;
+padding:0px;
+margin:0px auto;
+margin-bottom:1rem;
+}
+.vui.main .app .info .version{
+display:block;
+color:#aaa;
+font-size:13px;
+font-weight:normal;
+text-align: center;
+padding:0px;
+margin:0px auto;
+}
+
+.vui.main .videos{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  padding:10px;
+  margin:0px;
+}
+.vui.main .videos .item{
+  width:calc(100% / 5);
+  padding:10px;
+}
+.vui.main .videos .item .video-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top:1rem;
+}
+
+.vui.player{
+    position: relative;
+    width: 100%;
+}
+.vui.player:before {
+    content:"";
+    display: block;
+    padding-top: 56.25%; /* 高さと幅の比を16:9に固定。9/16*100=56.25 */
+}
+.vui.player iframe{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:0;
+    vertical-align:bottom;
+}
+.vui.thumbnails{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-content: space-around;
+align-content: stretch;
+padding:0px;
+margin:0px;
+}
+.vui.image.thumbnail{
+width:calc(100% / 3);
+padding:5px;
+margin:0px;
+}
+.vui.image.thumbnail img{
+width:100%;
+height:auto;
+vertical-align: bottom;
+padding:0px;
+margin:0px;
+}
+
+.vui.actress,.vui.editor{
+display:inline-block;
+width:100%;
+padding:0px;
+margin:0px;
+}
+.vui.actress{
+margin-top:15px;
+}
+.vui.actress:first-child{
+margin:0px;
+}
+.vui.actress .image,.vui.editor .image{
+display:block;
+float:left;
+width:80px;
+height:80px;
+border-radius:100%;
+object-fit:cover;
+padding:0px;
+margin:0px;
+margin-right:20px;
+vertical-align:bottom;
+}
+.vui.actress .bio .name,.vui.editor .bio .name{
+font-size:16px;
+font-weight:bold;
+}
+.vui.actress .bio .link .button,.vui.editor .bio .link .button{
+color:#fff!important;
+}
+.vui.actress::after,.vui.editor::after{
+content:""!important;
+clear:both!important;
+}
+
+.vui.timeline.image{
+  position: relative;
+  width: 100%;
+}
+.vui.timeline.image::before{
+  content:"";
+  display: block;
+  padding-top: 56.25%; /* 高さを幅の75%に固定 */
+}
+.vui.timeline.image.inline{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.vui.timeline.image .site{
+  color:#fff;
+  font-size:12px;
+  font-weight:normal;
+  position:absolute;
+  top:0;
+  left:0;
+  padding:5px;
+  margin:0px;
+}
+.vui.timeline.image .site.xvideos,.vui.timeline.image .site.xhamster{
+background-color:rgba(0,0,0,0.7);
+}
+.vui.timeline.image .site.erovideo,.vui.timeline.image .site.fanza{
+background-color:rgba(255,255,255,0.7);
+}
+.vui.timeline.image .site.fc2{
+background-color:rgba(247, 103, 103,0.7);
+}
+.vui.timeline.image .site.pornhub{
+background-color:rgba(255, 217, 68,0.7);
+}
+
+.vui.timeline.image .site.javynow{
+background-color:rgba(0, 195, 244,0.7);
+color:#fff;
+}
+.vui.timeline.image .site.tube8{
+background-color:rgba(0, 0, 0,0.7);
+color:red;
+}
+
+.vui.user{
+position:relative;
+display:inline-block;
+background-color:#fff;
+width:100%;
+height:350px;
+padding:0px;
+margin:0px;
+}
+.vui.user .info{
+position:relative;
+background-color:#ddd;
+width:100%;
+height:250px;
+}
+.vui.user .info .banner{
+position:relative;
+background-color:#ddd;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+overflow:hidden;
+width:100%;
+height:100%;
+}
+.vui.user .info .banner::before{
+content: '';
+background: inherit;/*.bgImageで設定した背景画像を継承する*/
+-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);
+position: absolute;
+/*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+top: -5px;
+left: -5px;
+right: -5px;
+bottom: -5px;
+z-index: -1;/*重なり順序を一番下にしておく*/
+}
+.vui.user .info::after{
+display:block;
+content:"";
+height:55px;
+}
+.vui.user .info .image{
+position:absolute;
+bottom:-55px;
+left:20px;
+background-color:#aaa;
+width:150px;
+height:150px;
+border-radius:150px;
+object-fit:cover;
+padding:0px;
+margin:0px;
+}
+.vui.user .info .bio{
+position:absolute;
+bottom:10px;
+right:20px;
+width:calc(100% - 210px);
+color:#fff;
+text-shadow:0px 0px 10px #000;
+padding:0px;
+margin:0px;
+}
+.vui.user .info .bio .name{
+font-size:25px;
+font-weight:bold;
+}
+.vui.user .info .bio .desc{
+font-size:14px;
+}
+
+.erocosPlayer{
+  display:flex;
+  justify-content:space-between;
+}
+.erocosPlayer .commentZone{
+  width:250px;
+  padding:0px;
+  margin:0px auto;
+}
+.erocosPlayer .playerZone{
+  width:calc(100% - 250px);
+  padding:0px;
+  margin:0px;
+}
+
+/*ad*/
+#pc-ad{
+display:flex!important;
+}
+#sp-ad{
+display:none!important;
+}
+.vui.main.watch{
+  width:calc(100% - 500px);
+  right:250px;
+}
+@media screen and (min-width:720px) and ( max-width:1200px) {
+.vui.header .item.search{
+display:none!important;
+position:relative;
+background-color:#EDF9FF;
+height:36.56px;
+line-height:36.56px;
+width:15em;
+border-radius:10px;
+overflow:hidden;
+padding:0px;
+margin:15px;
+}
+.vui.header .item.title{
+color:#aaa;
+font-size:14px;
+font-weight:bold;
+height:36.56px;
+line-height:36.56px;
+margin:15px;
+}
+.vui.header .item.title ._icon{
+float:left;
+color:#aaa;
+font-size:25px;
+font-weight:bold;
+height:36.56px;
+line-height:36.56px;
+margin-right:10px;
+margin-left:0px;
+}
+.vui.header .item.title .text{
+display:inline-block;
+height:36.56px;
+line-height:36.56px;
+font-weight:bold;
+margin:0;
+margin-left:0px;
+margin-right:0px;
+}
+
+.vui.sidebar{
+position:fixed;
+top:0px;
+left:-251px;
+bottom:0px;
+background-color:#fff;
+color:#aaa;
+width:250px;
+height:100%;
+border-right:1px #ddd solid;
+padding:0px;
+margin:0px;
+z-index:102;
+}
+.vui.sidebar .group.home{
+display:none!important;
+}
+.vui.fixed.menu.button{
+display:block;
+position:fixed;
+left:16px;
+bottom:16px;
+background-color:#fff;
+box-shadow:0px 0px 10px #ddd;
+width:64px;
+height:64px;
+border-radius:100%;
+padding:0px;
+margin:0px;
+}
+.vui.fixed.home.button{
+display:block;
+position:fixed;
+right:16px;
+bottom:16px;
+background-color:#fff;
+box-shadow:0px 0px 10px #ddd;
+width:64px;
+height:64px;
+border-radius:100%;
+padding:0px;
+margin:0px;
+}
+.vui.fixed.menu.button i._icon,.vui.fixed.home.button i._icon{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:30px;
+height:30px;
+line-height:30px;
+text-align:center;
+font-size:25px;
+margin:auto;
+}
+
+.vui.main{
+position:absolute;
+top:60px;
+left:0;
+right:0;
+min-height:calc(100% - 60px);
+width:100%;
+border:0;
+padding:20px;
+margin:0px;
+}
+.vui.main .app{
+position:relative;
+height:80px;
+padding:0px;
+margin:16px 0px;
+}
+.vui.main .app .info{
+position:absolute;
+top:50%;
+left:50%;
+transform: translateX(-50%) translateY(-50%);
+-webkit- translateX(-50%) translateY(-50%);
+display:inline-block;
+padding:0px;
+margin:0px;
+}
+.vui.main .app .info .name{
+display:block;
+font-size:15px;
+font-weight:bold;
+text-align: center;
+padding:0px;
+margin:0px auto;
+margin-bottom:1rem;
+}
+.vui.main .app .info .version{
+display:block;
+color:#aaa;
+font-size:13px;
+font-weight:normal;
+text-align: center;
+padding:0px;
+margin:0px auto;
+}
+
+.vui.popup.search{
+width:80%;
+}
+
+.vui.user{
+position:relative;
+display:inline-block;
+background-color:#fff;
+width:100%;
+height:250px;
+border-top:1px rgba(0,0,0,0.1) solid;
+border-bottom:1px rgba(0,0,0,0.1) solid;
+padding:0px;
+margin:0px;
+}
+.vui.user .info{
+position:relative;
+background-color:#ddd;
+width:100%;
+height:200px;
+}
+.vui.user .info .banner{
+position:relative;
+background-color:#ddd;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+overflow:hidden;
+width:100%;
+height:100%;
+}
+.vui.user .info .banner::before{
+content: '';
+background: inherit;/*.bgImageで設定した背景画像を継承する*/
+-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+filter: blur(5px);
+position: absolute;
+/*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+top: -5px;
+left: -5px;
+right: -5px;
+bottom: -5px;
+z-index: -1;/*重なり順序を一番下にしておく*/
+}
+.vui.user .info::after{
+display:block;
+content:"";
+height:55px;
+}
+.vui.user .info .image{
+position:absolute;
+bottom:-25px;
+left:10px;
+background-color:#aaa;
+width:97.5px;
+height:97.5px;
+border-radius:97.5px;
+object-fit:cover;
+padding:0px;
+margin:0px;
+}
+.vui.user .info .bio{
+position:absolute;
+bottom:10px;
+right:10px;
+width:calc(100% - 127.5px);
+color:#fff;
+text-shadow:0px 0px 10px #000;
+padding:0px;
+margin:0px;
+}
+.vui.user .info .bio .name{
+font-size:18px;
+font-weight:bold;
+}
+.vui.user .info .bio .desc{
+font-size:13px;
+}
+/*ad*/
+#pc-ad{
+display:none!important;
+}
+#sp-ad{
+display:flex!important;
+}
+.vui.sidebar2{
+  display:none;
+}
+.vui.main.watch{
+  width:100%;
+  right:0px;
+}
+.vui.main .videos .item{
+  width:calc(100% / 3);
+  padding:10px;
+}
+}
+@media screen and (max-width:719px){
+  .vui.header .item.search{
+  display:none!important;
+  position:relative;
+  background-color:#EDF9FF;
+  height:36.56px;
+  line-height:36.56px;
+  width:15em;
+  border-radius:10px;
+  overflow:hidden;
+  padding:0px;
+  margin:15px;
+  }
+  .vui.header .item.title{
+  color:#aaa;
+  font-size:14px;
+  font-weight:bold;
+  height:36.56px;
+  line-height:36.56px;
+  margin:15px;
+  }
+  .vui.header .item.title ._icon{
+  float:left;
+  color:#aaa;
+  font-size:25px;
+  font-weight:bold;
+  height:36.56px;
+  line-height:36.56px;
+  margin-right:10px;
+  margin-left:0px;
+  }
+  .vui.header .item.title .text{
+  display:inline-block;
+  height:36.56px;
+  line-height:36.56px;
+  font-weight:bold;
+  margin:0;
+  margin-left:0px;
+  margin-right:0px;
+  }
+
+  .vui.sidebar{
+  position:fixed;
+  top:0px;
+  left:-251px;
+  bottom:0px;
+  background-color:#fff;
+  color:#aaa;
+  width:250px;
+  height:100%;
+  border-right:1px #ddd solid;
+  padding:0px;
+  margin:0px;
+  z-index:102;
+  }
+  .vui.sidebar .group.home{
+  display:none!important;
+  }
+  .vui.fixed.menu.button{
+  display:block;
+  position:fixed;
+  left:16px;
+  bottom:16px;
+  background-color:#fff;
+  box-shadow:0px 0px 10px #ddd;
+  width:64px;
+  height:64px;
+  border-radius:100%;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.fixed.home.button{
+  display:block;
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  background-color:#fff;
+  box-shadow:0px 0px 10px #ddd;
+  width:64px;
+  height:64px;
+  border-radius:100%;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.fixed.menu.button i._icon,.vui.fixed.home.button i._icon{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:30px;
+  height:30px;
+  line-height:30px;
+  text-align:center;
+  font-size:25px;
+  margin:auto;
+  }
+
+  .vui.main{
+  position:absolute;
+  top:60px;
+  left:0;
+  right:0;
+  min-height:calc(100% - 60px);
+  width:100%;
+  border:0;
+  padding:20px;
+  margin:0px;
+  }
+  .vui.main .app{
+  position:relative;
+  height:80px;
+  padding:0px;
+  margin:16px 0px;
+  }
+  .vui.main .app .info{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit- translateX(-50%) translateY(-50%);
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.main .app .info .name{
+  display:block;
+  font-size:15px;
+  font-weight:bold;
+  text-align: center;
+  padding:0px;
+  margin:0px auto;
+  margin-bottom:1rem;
+  }
+  .vui.main .app .info .version{
+  display:block;
+  color:#aaa;
+  font-size:13px;
+  font-weight:normal;
+  text-align: center;
+  padding:0px;
+  margin:0px auto;
+  }
+
+  .vui.popup.search{
+  width:80%;
+  }
+
+  .vui.user{
+  position:relative;
+  display:inline-block;
+  background-color:#fff;
+  width:100%;
+  height:250px;
+  border-top:1px rgba(0,0,0,0.1) solid;
+  border-bottom:1px rgba(0,0,0,0.1) solid;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.user .info{
+  position:relative;
+  background-color:#ddd;
+  width:100%;
+  height:200px;
+  }
+  .vui.user .info .banner{
+  position:relative;
+  background-color:#ddd;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  }
+  .vui.user .info .banner::before{
+  content: '';
+  background: inherit;/*.bgImageで設定した背景画像を継承する*/
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;/*重なり順序を一番下にしておく*/
+  }
+  .vui.user .info::after{
+  display:block;
+  content:"";
+  height:55px;
+  }
+  .vui.user .info .image{
+  position:absolute;
+  bottom:-25px;
+  left:10px;
+  background-color:#aaa;
+  width:97.5px;
+  height:97.5px;
+  border-radius:97.5px;
+  object-fit:cover;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.user .info .bio{
+  position:absolute;
+  bottom:10px;
+  right:10px;
+  width:calc(100% - 127.5px);
+  color:#fff;
+  text-shadow:0px 0px 10px #000;
+  padding:0px;
+  margin:0px;
+  }
+  .vui.user .info .bio .name{
+  font-size:18px;
+  font-weight:bold;
+  }
+  .vui.user .info .bio .desc{
+  font-size:13px;
+  }
+  /*ad*/
+  #pc-ad{
+  display:none!important;
+  }
+  #sp-ad{
+  display:flex!important;
+  }
+  .vui.sidebar2{
+    display:none;
+  }
+  .vui.main.watch{
+    width:100%;
+    right:0px;
+  }
+  .vui.main .videos .item{
+    width:calc(100% / 1);
+    padding:10px;
+  }
+}

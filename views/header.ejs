@@ -1,0 +1,94 @@
+<div class="vui header">
+<div class="center">
+<a class="item title" href="<%= process.env.app_url %>">
+リモブー
+</a>
+</div>
+</div>
+<div class="vui sidebarBack"></div>
+<div class="vui popupBack"></div>
+<div class="vui sidebar">
+<div class="group home">
+<a class="item<% if(path == "top"){ %> active<% } %>" href="http://<%= host %>">
+<img class="vui _icon" src="images/icons/home.png">
+<span class="text">ホーム</span>
+</a>
+<div class="vui divider"></div>
+</div>
+<div class="group">
+<!--
+<a class="item poplink" data-target="search">
+<img class="vui _icon" src="images/icons/search.png">
+<span class="text">
+検索
+</span>
+</a>
+-->
+<a class="item<% if(path == "info"){ %> active<% } %>" href="http://<%= host %>/info">
+<img class="vui _icon" src="images/icons/info.png">
+<span class="text">
+デバイス情報
+</span>
+</a>
+<a class="item<% if(path == "settings"){ %> active<% } %>" href="http://<%= host %>/settings">
+<img class="vui _icon" src="images/icons/settings.png">
+<span class="text">
+デバイス設定
+</span>
+</a>
+<a class="item poplink" data-target="event">
+<img class="vui _icon" src="images/icons/event.png">
+<span class="text">
+バイブ稼働設定
+</span>
+</a>
+</div>
+<div class="vui divider"></div>
+<div class="group">
+<a class="item<% if(path == "amazon"){ %> active<% } %>" href="http://<%= host %>/amazon">
+<img class="vui _icon" src="images/icons/amazongift.png">
+<span class="text">
+Amazonギフト券管理
+</span>
+</a>
+</div>
+<div class="vui divider"></div>
+<div class="group">
+<a class="item" href="https://www.lovense.com/r/54nw78" target="_blank">
+<img class="vui _icon" src="images/icons/shop.png">
+<span class="text">
+Lovense公式ストア
+</span>
+</a>
+</div>
+<div class="vui divider"></div>
+<div class="group">
+<a class="item poplink" data-target="error">
+<img class="vui _icon" src="images/icons/error.png">
+<span class="text">
+エラー情報
+</span>
+</a>
+<div class="item">
+<img class="vui _icon" src="images/icons/download.png">
+<span class="text">
+システム更新
+</span>
+</div>
+<a class="item<% if(path == "reboot"){ %> active<% } %>" href="http://<%= host %>/reboot">
+<img class="vui _icon" src="images/icons/reboot.png">
+<span class="text">
+システム再起動
+</span>
+</a>
+</div>
+<div class="vui divider"></div>
+<div class="group">
+<div class="item">
+<img class="vui _icon" src="images/icons/device.png">
+<span class="text">
+v <%= conf.app.version %>
+</span>
+</div>
+</div>
+</div>
