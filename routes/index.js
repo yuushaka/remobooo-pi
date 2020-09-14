@@ -75,8 +75,19 @@ router.get('/api/v1/temperature', function(req, res, next) {
   );
 });
 
+router.get('/api/v1/update',function(req,res,next){
+  exec("git pull", (error, stdout, stderr) => {
+    if (error) {
+      console.log(error);
+      console.log(stderr);
+    }
+    console.log(stdout);
+  });
+  res.redirect('/');
+});
+
 router.get('/api/v1/reboot',function(req,res,next){
-  exec("pm2 restart remobooo", (error, stdout, stderr) => {
+  exec("pm2 restart remobooo-pi", (error, stdout, stderr) => {
     if (error) {
       console.log(error);
       console.log(stderr);
