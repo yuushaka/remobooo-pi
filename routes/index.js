@@ -76,7 +76,7 @@ router.get('/api/v1/temperature', function(req, res, next) {
 });
 
 router.get('/api/v1/update',function(req,res,next){
-  exec("cd /home/pi/remobooo-pi & git pull", (error, stdout, stderr) => {
+  exec("cd /home/pi/remobooo-pi & git pull & pm2 restart remobooo-pi", (error, stdout, stderr) => {
     if (error) {
       console.log(error);
       console.log(stderr);
