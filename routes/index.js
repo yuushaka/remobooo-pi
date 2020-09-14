@@ -30,6 +30,10 @@ router.get('/info', function(req, res, next) {
   });
 });
 
+router.get('/updated', function(req, res, next) {
+  res.render('updated',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+});
+
 router.get('/reboot', function(req, res, next) {
   res.render('reboot',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
 });
@@ -75,19 +79,14 @@ router.get('/api/v1/temperature', function(req, res, next) {
   );
 });
 
-router.get('/api/v1/update',function(req,res,next){
+router.get('/update',function(req,res,next){
   exec("cd /home/pi/remobooo-pi & git pull & pm2 restart remobooo-pi", (error, stdout, stderr) => {
     if (error) {
       console.log(error);
       console.log(stderr);
     }
-    res.json(
-      {
-        status:200,
-        updated:true
-      }
-    );
   });
+  res.redirect('/updated');
 });
 
 router.get('/api/v1/reboot',function(req,res,next){
