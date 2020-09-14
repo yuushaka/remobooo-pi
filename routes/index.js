@@ -88,7 +88,6 @@ router.get('/api/v1/update',function(req,res,next){
       }
     );
   });
-  res.redirect('/');
 });
 
 router.get('/api/v1/reboot',function(req,res,next){
