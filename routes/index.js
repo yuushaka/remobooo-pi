@@ -6,6 +6,7 @@ var Wifi = require('rpi-wifi-connection');
 var wifi = new Wifi();
 var ip = require("ip");
 var proc = require('rpi-proc-info');
+var git = require( 'simple-git' );
 var Datastore = require('nedb');
 var db = new Datastore({
     filename: '/home/pi/db/remobooo/system.db'
@@ -80,12 +81,9 @@ router.get('/api/v1/temperature', function(req, res, next) {
 });
 
 router.get('/update',function(req,res,next){
-  exec("cd /home/pi/remobooo-pi & git pull", (error, stdout, stderr) => {
-    if (error) {
-      console.log(error);
-      console.log(stderr);
-    }
-  });
+  var git_url = 'https://github.com/yuushaka/remobooo-pi.git';
+  var local_folder = '/home/pi/remobooo-pi';
+  git( local_folder ).pull();
   res.redirect('/updated');
 });
 
