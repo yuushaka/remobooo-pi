@@ -81,7 +81,12 @@ router.get('/api/v1/update',function(req,res,next){
       console.log(error);
       console.log(stderr);
     }
-    console.log(stdout);
+    res.json(
+      {
+        status:200,
+        updated:true
+      }
+    );
   });
   res.redirect('/');
 });
