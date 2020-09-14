@@ -93,7 +93,7 @@ router.get('/update',function(req,res,next){
   });
   res.json(
     {
-      status:success
+      status:'success'
     }
   );
 });
