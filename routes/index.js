@@ -91,11 +91,7 @@ router.get('/update',function(req,res,next){
     }
     console.log(stdout);
   });
-  res.json(
-    {
-      status:'success'
-    }
-  );
+  res.redirect('/updated');
 });
 
 router.get('/api/v1/reboot',function(req,res,next){
