@@ -84,13 +84,6 @@ router.get('/update',function(req,res,next){
   var git_url = 'https://github.com/yuushaka/remobooo-pi.git';
   var local_folder = '/home/pi/remobooo-pi';
   git( local_folder ).pull();
-  exec("pm2 restart remobooo-pi", (error, stdout, stderr) => {
-    if (error) {
-      console.log(error);
-      console.log(stderr);
-    }
-    console.log(stdout);
-  });
   res.redirect('/updated');
 });
 
