@@ -45,7 +45,7 @@
           </tr>
           <tr>
             <td style="width:15em;"><b>システムバージョン</b></td>
-            <td>v <%= conf.app.version %>　<span class="ui label teal update">最新バージョンです</span></td>
+            <td>v <%= conf.app.version %>　<span class="ui label teal update"><i class='icon server'></i>最新バージョンです</span></td>
           </tr>
         </tbody>
       </table>
@@ -54,9 +54,9 @@
     <script type="text/javascript">
     $.getJSON("https://remob.ooo/api/v1/check/update",function(version){
       if(version.number > <%= conf.app.number %>){
-        $(".label.update").text("最新バージョンがあります");
+        $(".label.update").html("<i class='icon server'></i>最新バージョンがあります");
       }else{
-        $(".label.update").text("最新バージョンです");
+        $(".label.update").html("<i class='icon server'></i>最新バージョンです");
       }
     });
     function show_T() {
