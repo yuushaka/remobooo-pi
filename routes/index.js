@@ -15,13 +15,13 @@ db.loadDatabase();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+  res.render('index',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 
 router.get('/info', function(req, res, next) {
   wifi.scan().then((ssids)=>{
     wifi.getStatus().then((status) => {
-      res.render('info',{conf:conf,ssids:ssids,status:status,title:'リモブー',ip:ip,host:req.headers.host,proc:proc});
+      res.render('info',{conf:conf,ssids:ssids,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
     })
     .catch((error) => {
       console.log(error);
@@ -32,17 +32,17 @@ router.get('/info', function(req, res, next) {
 });
 
 router.get('/updated', function(req, res, next) {
-  res.render('updated',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+  res.render('updated',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 
 router.get('/reboot', function(req, res, next) {
-  res.render('reboot',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+  res.render('reboot',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 
 router.get('/settings', function(req, res, next) {
   wifi.scan().then((ssids)=>{
     wifi.getStatus().then((status) => {
-      res.render('settings',{conf:conf,ssids:ssids,status:status,title:'リモブー',ip:ip,host:req.headers.host,proc:proc});
+      res.render('settings',{conf:conf,ssids:ssids,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
     })
     .catch((error) => {
       console.log(error);
@@ -53,10 +53,10 @@ router.get('/settings', function(req, res, next) {
 });
 
 router.get('/amazon', function(req, res, next) {
-  res.render('amazon',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+  res.render('amazon',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 router.get('/errors', function(req, res, next) {
-  res.render('errors',{conf:conf,title:'リモブー',ip:ip,host:req.headers.host});
+  res.render('errors',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 
 router.post('/api/v1/wifi', function(req, res, next) {
