@@ -45,13 +45,20 @@
           </tr>
           <tr>
             <td style="width:15em;"><b>システムバージョン</b></td>
-            <td>v <%= conf.app.version %>　<span class="ui label teal">最新</span></td>
+            <td>v <%= conf.app.version %>　<span class="ui label teal update">最新バージョンです</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <%- include('./footer') %>
     <script type="text/javascript">
+    $.getJSON("https://remob.ooo/api/v1/check/update",function(version){
+      if(version.number > <%= conf.app.number %>){
+        $(".label.update").text("最新バージョンがあります");
+      }else{
+        $(".label.update").text("最新バージョンです");
+      }
+    });
     function show_T() {
       $.getJSON("http://<%= host %>/api/v1/temperature",function(temperature){
         document.getElementById("cpu_t").innerHTML = temperature.cpu;
