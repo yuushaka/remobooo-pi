@@ -55,9 +55,9 @@
     $.getJSON("https://remob.ooo/api/v1/check/update",function(version){
       if(version.number > <%= conf.app.number %>){
         $(".label.update").html("<i class='icon server'></i>最新バージョンがあります");
+        $(".label.update").attr("href","http://<%= host %>/update");
       }else{
         $(".label.update").html("<i class='icon server'></i>最新バージョンです");
-        $(".label.update").attr("href","http://<%= host %>/update");
       }
     });
     function show_T() {
