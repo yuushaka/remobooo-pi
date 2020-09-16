@@ -45,7 +45,7 @@
           </tr>
           <tr>
             <td style="width:15em;"><b>システムバージョン</b></td>
-            <td>v <%= conf.app.version %>　<span class="ui label teal update"><i class='icon server'></i>最新バージョンです</span></td>
+            <td>v <%= conf.app.version %>　<a class="ui label teal update"><i class='icon server'></i>最新バージョンです</a></td>
           </tr>
         </tbody>
       </table>
@@ -57,6 +57,7 @@
         $(".label.update").html("<i class='icon server'></i>最新バージョンがあります");
       }else{
         $(".label.update").html("<i class='icon server'></i>最新バージョンです");
+        $(".label.update").attr("href","http://<%= host %>/update");
       }
     });
     function show_T() {
