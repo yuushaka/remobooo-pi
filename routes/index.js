@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 var conf = require('config');
 const exec = require('child_process').exec;
-var Wifi = require('rpi-wifi-connection');
-var wifi = new Wifi();
 var ip = require("ip");
 var proc = require('rpi-proc-info');
 var git = require( 'simple-git' );
@@ -19,16 +17,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/info', function(req, res, next) {
-  wifi.scan().then((ssids)=>{
-    wifi.getStatus().then((status) => {
-      res.render('info',{conf:conf,ssids:ssids,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  })
-  .catch((error)=>{
-  });
+  res.render('info',{conf:conf,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
 });
 
 router.get('/updated', function(req, res, next) {
@@ -39,36 +28,12 @@ router.get('/reboot', function(req, res, next) {
   res.render('reboot',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
 
-router.get('/settings', function(req, res, next) {
-  wifi.scan().then((ssids)=>{
-    wifi.getStatus().then((status) => {
-      res.render('settings',{conf:conf,ssids:ssids,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  })
-  .catch((error)=>{
-  });
-});
-
 router.get('/amazon', function(req, res, next) {
   res.render('amazon',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
 });
+
 router.get('/errors', function(req, res, next) {
   res.render('errors',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host});
-});
-
-router.post('/api/v1/wifi', function(req, res, next) {
-  var ssid = req.body.ssid;
-  var passwd = req.body.passwd;
-  console.log(ssid);
-  wifi.connect({ssid:ssid, psk:passwd}).then(() => {
-    res.send('Connected to network.');
-  })
-  .catch((error) => {
-      res.send(error);
-  });
 });
 
 router.get('/api/v1/temperature', function(req, res, next) {
