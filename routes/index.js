@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/info', function(req, res, next) {
-  res.render('info',{conf:conf,status:status,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
+  res.render('info',{conf:conf,title:'RemoboooPi',ip:ip,host:req.headers.host,proc:proc});
 });
 
 router.get('/updated', function(req, res, next) {
