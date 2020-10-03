@@ -1,6 +1,7 @@
 {
   "app":{
-    "version":"α1.0.27",
-    "number":100010027
+    "name":"RemoPi",
+    "version":"α1.1.0",
+    "number":100010100
   }
 }
